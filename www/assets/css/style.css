@@ -1,0 +1,17 @@
+.list{font:10pt Tahoma; color:#000; background:#9bbb59;}
+.head{background:#FFA03A; }
+.foot{background:#FFBE79 !IMPORTANT; }
+.row{background:#e6eed5; }
+.boldtext{font-weight:bold}
+.editing { display: none; }
+.hiden{display: none;}
+.editing_input {display: block;}
+.isEditing {display: block;}
+
+.input-group .form-control{
+	border-radius: 5px !IMPORTANT;
+}
+.container {
+	padding-left: 0 !IMPORTANT;
+	padding-right: 0 !IMPORTANT;
+}

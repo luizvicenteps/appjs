@@ -1,0 +1,126 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" zoom="20%">
+    <title></title>
+    <script src="assets/js/jquery-1.8.2.min.js" type="text/javascript"></script>
+    <script src="assets/js/knockout-2.2.1.js" type="text/javascript"></script>
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div class="container">
+<div class="table table-responsive">
+    <table class="table table-striped" cellpadding="5" cellspacing="1">
+        <thead>
+            <tr class="head">
+            <!-- <th></th> -->
+                <th>
+                    Nome
+                </th>
+                <th>
+                    Sobrenome
+                </th>
+                
+                 <th>
+                    Telefone
+                </th>
+                <th>
+                    Email
+                </th>
+                <th>
+                Action
+                </th>
+            </tr>
+        </thead>
+        <tbody data-bind="foreach: Contatos">
+            <tr data-bind="css: { editing: isEditing }">
+                <td class="boldtext">
+                    <span data-bind="text: Nome"></span>
+                </td>
+                <td class="boldtext">
+                    <span data-bind="text: Sobrenome"></span>
+                </td>
+                 <td>
+                    <span data-bind="text: Contato"></span>
+                </td>
+                <td>
+                    <span data-bind="text: Email"></span>
+                </td>
+                <td>
+                    
+                    <button class="btn btn-info" data-bind="click: editarContato">
+                        <span class="glyphicon glyphicon glyphicon-pencil"/>
+                    </button>
+
+                    <button class="btn btn-danger" data-bind="click: $parent.removerContato">
+                        <span class="glyphicon glyphicon-remove-circle" aria-hidden="true"/>
+                    </button>
+                    
+                </td>
+            </tr>
+            <tr  class="active" data-bind="visible: isEditing">
+                <td>
+                    <div class="input-group">
+                    <input data-bind="value: Nome" type="text" class="form-control" placeholder="Nome">
+                    </div>
+                </td>
+                <td>
+                    <div class="input-group">
+                    <input data-bind="value: Sobrenome" type="text" class="form-control" placeholder="Sobrenome">
+                    </div>
+                </td>
+                <td>
+                <div class="input-group">
+                    <input data-bind="value: Contato" type="text" class="form-control" placeholder="Telefone">
+                </div>
+                </td>
+                <td>
+                <div class="input-group">
+                    <input data-bind="value: Email" type="email" class="form-control" placeholder="Email">
+                </div>
+                </td>
+                <td>
+                    <button type="submit" class="btn btn-primary" data-bind="click: atualizarContato">
+                        <span class="glyphicon glyphicon-ok"/>
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <form data-bind="submit: adicionarContato">
+            <tr class="foot">
+            <td>
+                <div class="input-group">
+                    <input data-bind="value: Nome" type="text" class="form-control" placeholder="Nome">
+                </div>
+            </td>
+            <td>
+                <div class="input-group">
+                    <input data-bind="value: Sobrenome" type="text" class="form-control" placeholder="Sobrenome">
+                </div>
+                </td>
+            <td>
+                <div class="input-group">
+                    <input data-bind="value: Contato" type="integer" class="form-control" placeholder="Telefone">
+                </div>
+            </td>
+            <td>
+                <div class="input-group">
+                    <input data-bind="value: Email" type="email" class="form-control" placeholder="Email">
+                </div>
+                </td>
+            <td>
+                <button class="btn btn-success" type="submit" value="Adicionar">
+                    <span class="glyphicon glyphicon-plus-sign"/>
+                    </button>
+                </td>
+            </tr>
+            </form>
+        </tfoot>
+    </table>
+</div>  
+</div>  
+<script src="assets/js/contacts.js" type="text/javascript"></script>
+</body>
+</html>
