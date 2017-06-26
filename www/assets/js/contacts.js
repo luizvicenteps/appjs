@@ -19,9 +19,10 @@
         var viewModel = function () {
             self = this;
      
-             var listaContatos = [new _contato("Jose Carlos", "Macoratti", "99850-9652", "macoratti.jose@gmail.com"),
-                                           new _contato("Janice", "Lima", "8850-0011", "lima.Jjanice@ymail.com"),
-                                           new _contato("Jefferson", "Bueno", "7850-9080", "bueno.jefferson@hotmail.com")];
+             var listaContatos = [new _contato("Luiz Vicente", "Prestes", "92 99454-7306", "luizvicenteps@gmail.com"),
+                                           new _contato("Brando", "Mota", "92 98405-9787", "mota.brando@ymail.com"),
+                                           new _contato("Bruno", "Gomes", "92 98405-9787", "gomes.brunoo@yahoo.com"),
+                                           new _contato("Caio", "Vitor", "92 99202-2926", "vitor.caio@hotmail.com")];
 
             self.Nome = ko.observable();
             self.Sobrenome = ko.observable();
